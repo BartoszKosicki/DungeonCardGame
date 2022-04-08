@@ -1,9 +1,9 @@
 package com.example.dungeaoncrawler.logic.actors;
 
-import com.example.dungeaoncrawler.logic.Cell;
-import com.example.dungeaoncrawler.logic.CellType;
-import com.example.dungeaoncrawler.logic.Drawable;
-import com.example.dungeaoncrawler.logic.status.LifeChanger;
+import com.example.dungeaoncrawler.logic.map.Cell;
+import com.example.dungeaoncrawler.logic.map.CellType;
+import com.example.dungeaoncrawler.logic.map.Drawable;
+import com.example.dungeaoncrawler.logic.actors.statusActors.LifeChanger;
 
 import java.io.Serializable;
 import java.util.ArrayList;

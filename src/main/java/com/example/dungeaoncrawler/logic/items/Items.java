@@ -1,6 +1,6 @@
 package com.example.dungeaoncrawler.logic.items;
 
-import com.example.dungeaoncrawler.logic.Position;
+import com.example.dungeaoncrawler.logic.map.Position;
 
 import java.io.Serializable;
 

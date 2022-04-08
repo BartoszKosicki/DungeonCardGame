@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dungeaoncrawler.FightController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dungeaoncrawler.logic.fight.FightController">
    <children>
       <ImageView fx:id="windowBackground" fitHeight="800.0" fitWidth="1280.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -37,7 +37,7 @@
                               <Image url="@image/cards/swordAttack2.gif" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="card1background4" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="cardBackground4" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/cardHeal.png" />
                            </image>
@@ -64,7 +64,7 @@
                               <Image url="@image/cards/swordAttack2.gif" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="card1background" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="cardBackground" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/cardHeal.png" />
                            </image>
@@ -91,7 +91,7 @@
                               <Image url="@image/cards/shield.gif" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="cardbackground1" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="cardBackground1" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/cardHeal.png" />
                            </image>
@@ -118,7 +118,7 @@
                               <Image url="@image/cards/swordAttack.gif" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="card1background2" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="cardBackground2" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/cardHeal.png" />
                            </image>
@@ -148,7 +148,7 @@
                               <Image url="@image/cards/poison.gif" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="card1background3" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="cardBackground3" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/cardHeal.png" />
                            </image>
@@ -178,7 +178,7 @@
                               <Image url="@image/cards/swordAttack2.gif" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="card1background5" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="cardBackground5" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/cardHeal.png" />
                            </image>
@@ -317,7 +317,7 @@
                         <Image url="@image/cards/swordAttack2.gif" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="winningCardbackground0" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="winningCardBackground0" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/cardHeal.png" />
                      </image>
@@ -341,7 +341,7 @@
                         <Image url="@image/cards/swordAttack2.gif" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="winningCardbackground1" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="winningCardBackground1" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/cardHeal.png" />
                      </image>
@@ -365,7 +365,7 @@
                         <Image url="@image/cards/swordAttack2.gif" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="winningCardbackground2" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="winningCardBackground2" fitHeight="348.0" fitWidth="202.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@image/cardHeal.png" />
                      </image>

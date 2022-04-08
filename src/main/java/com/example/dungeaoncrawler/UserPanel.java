@@ -1,8 +1,8 @@
 package com.example.dungeaoncrawler;
 
-import com.example.dungeaoncrawler.logic.actors.MageClass;
-import com.example.dungeaoncrawler.logic.actors.Player;
-import com.example.dungeaoncrawler.logic.actors.WarriorClass;
+import com.example.dungeaoncrawler.logic.actors.player.MageClass;
+import com.example.dungeaoncrawler.logic.actors.player.Player;
+import com.example.dungeaoncrawler.logic.actors.player.WarriorClass;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -25,15 +25,24 @@ import java.util.ResourceBundle;
 
 public class UserPanel extends Application implements Initializable {
 
-    HelloApplication helloApplication;
+    MapScene mapScene;
+    ObservableList<String> charactersList = FXCollections.observableArrayList("Mag", "Warrior");
+    public static String userName;
 
     public static void main(String[] args) {
         launch();
     }
 
     @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        playerSelector.setValue("Mag");
+        playerSelector.getItems().addAll(charactersList);
+    }
+
+
+    @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("user-panel.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MapScene.class.getResource("user-panel.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("CardCrawl");
         stage.setScene(scene);
@@ -42,12 +51,7 @@ public class UserPanel extends Application implements Initializable {
     }
 
     @FXML
-    private TextField idUserName;
-
-    public static String userName;
-
-    @FXML
-    void startGame(ActionEvent event) {
+    void startGame() {
         Player player = null;
         int playerType = playerSelector.getSelectionModel().getSelectedIndex();
         if (Objects.equals(playerType, 0)) {
@@ -55,13 +59,16 @@ public class UserPanel extends Application implements Initializable {
         } else if (Objects.equals(playerType, 1)) {
             player = new WarriorClass(100, 0, 20, getIdUserName(), 3, null);
         }
-        helloApplication = new HelloApplication(player);
-        helloApplication.loadNewGame();
+        mapScene = new MapScene(player);
+        mapScene.loadNewGame();
     }
 
     @FXML
+    private TextField idUserName;
+
+    @FXML
     void loadPreviousGame(ActionEvent event) {
-        helloApplication.loadSavedGame();
+        mapScene.loadSavedGame();
     }
 
     @FXML
@@ -88,12 +95,4 @@ public class UserPanel extends Application implements Initializable {
 
     @FXML
     private ChoiceBox<String> playerSelector;
-
-    ObservableList<String> charactersList = FXCollections.observableArrayList("Mag", "Warrior");
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        playerSelector.setValue("Mag");
-        playerSelector.getItems().addAll(charactersList);
-    }
 }
