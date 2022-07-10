@@ -12,6 +12,9 @@ BOARD
 3. The minimap appears when the "M" key is pressed.
 4. Direct combat occurs when a player or opponent enters the same field. 
 
+![ScreenShot](https://raw.github.com/BartoszKosicki/DungeonCardGame/main/game_board.jpg)
+
+
 FIGHT
 1. Combat is turn-based. The player moves first, followed by the opponent. 
 2. Each round consists of a card selection, a dice roll and the playing of selected cards.
@@ -21,6 +24,7 @@ FIGHT
 6. After all cards in the deck have been played, all cards are shuffled and cards can be drawn from the deck again.
 7. After winning a battle, the player can choose one card from the three generated cards to add to the deck. 
 
+![ScreenShot](https://raw.github.com/BartoszKosicki/DungeonCardGame/main/game_fight.jpg)
 
 Developers:
 * Jakub Bogacki, 
